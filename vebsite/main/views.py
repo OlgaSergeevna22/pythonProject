@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('<h4>hello</h4>')
+    return render(request, 'main/index.html')
+
+def about(request):
+    return render(request, 'main/about.html')
 
 def home(request):
     return HttpResponse('<h2>HomeWork</h2>')
