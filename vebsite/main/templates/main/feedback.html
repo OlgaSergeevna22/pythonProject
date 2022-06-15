@@ -13,6 +13,7 @@
     font-size: 10pt;
 </style>
     <form method="post">
+        {%csrf_token%}
         <input type="number" min="1" max="10" required placeholder="Поставьте вашу оценку от 1 до 10" class="form-control"><br>
         <textarea type="text" placeholder="Ваш отзыв" class="form-control"></textarea><br>
         <button type="submit" class="b1">Отправить</button>
