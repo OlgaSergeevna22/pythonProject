@@ -12,4 +12,7 @@ def about(request):
 def create(request):
     return render(request, 'main/create.html')
 
+def feedback(request):
+    return render(request, 'main/feedback.html')
+
 
