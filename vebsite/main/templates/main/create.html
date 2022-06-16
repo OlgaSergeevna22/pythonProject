@@ -8,6 +8,9 @@
 <h1>Создать новую задачу</h1>
     <form method="post">
         {% csrf_token %}
+        {{form.title}}
+        {{form.task}}
+        {{form.technology}}
         <input type="text" placeholder="Введите название" class="form-control"><br>
         <textarea type="text" placeholder="Введите описание" class="form-control"></textarea><br>
         <input type="text" placeholder="Введите технологию" class="form-control"><br>
