@@ -7,15 +7,30 @@
 {%block content%}
 <h1>Оставить отзыв</h1>
 <style>
+.input {
+       font-style:italic;
+       color: #8B0000;
+       background-color:#FFEFD5;
+}
+label {
+font-size:20px;
+font-weight:500;
+color:#800080;
+}
     .b1 {
     background: navy;
     color: white;
     font-size: 10pt;
+
 </style>
     <form method="post">
         {%csrf_token%}
-        <input type="number" min="1" max="10" required placeholder="Поставьте вашу оценку от 1 до 10" class="form-control"><br>
-        <textarea type="text" placeholder="Ваш отзыв" class="form-control"></textarea><br>
+        <label for="Ваше имя" >Ваше имя:</label>
+        <input type="text" required placeholder="Ваше имя" class="input" size="150"><br>
+        <label for="Ваш отзыв">Ваш отзыв:</label>
+        <textarea type="text" placeholder="Ваш отзыв" class="input" rows="1" cols="151"></textarea><br>
+        <label for="Поставьте вашу оценку от 1 до 10">Ваша оценка:</label>
+        <input type="number" min="1" max="10" required placeholder="1-10" class="input"><br>
         <button type="submit" class="b1">Отправить</button>
 
     </form>
